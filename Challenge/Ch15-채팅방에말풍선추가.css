@@ -64,7 +64,7 @@ img{
     display: flex;
     flex-direction: column;
 }
-.chat-screen__texts > .text{
+.chat-screen__texts > .left{
     background-color: #34d27b;
     width: fit-content;
     height: fit-content;
@@ -77,7 +77,7 @@ img{
     position: relative;
     left: 20px;
 }
-.chat-screen__texts > .text::after{
+.chat-screen__texts > .left::after{
     content: "";
     border-right: 16px solid #34d27b;
     border-bottom: 16px solid transparent; /* 겹치는 부분을 투명하게 해서 깎아서 삼각형을 만듦 */
@@ -86,23 +86,19 @@ img{
     left: -10px;
 }
 
-.chat-screen__texts > .text:hover{
+.chat-screen__texts > .left:hover{
     background-color: #1c9352;
     transition: background-color 1500ms 200ms ease-in;
 }
-.chat-screen__texts > .text:hover::after{
+.chat-screen__texts > .left:hover::after{
     border-right: 16px solid #1c9352;
     transition: border-right 1500ms 200ms ease-in;
 }
 
-.chat-screen__texts-me{
-    padding: 0;
-    list-style-type: none;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
+.chat-screen__texts .right{
+    align-self: flex-end;
 }
-.chat-screen__texts-me > .text{
+.chat-screen__texts > .right{
     background-color: #34d27b;
     width: fit-content;
     height: fit-content;
@@ -115,7 +111,8 @@ img{
     position: relative;
     right: 20px;
 }
-.chat-screen__texts-me > .text::after{
+
+.chat-screen__texts > .right::after{
     content: "";
     border-left: 16px solid #34d27b;
     border-bottom: 16px solid transparent; 
@@ -123,11 +120,11 @@ img{
     top: 10px;
     right: -10px;
 }
-.chat-screen__texts-me > .text:hover{
+.chat-screen__texts > .right:hover{
     background-color: #1c9352;
     transition: background-color 1500ms 200ms ease-in;
 }
-.chat-screen__texts-me > .text:hover::after{
+.chat-screen__texts > .right:hover::after{
     border-left: 16px solid #1c9352;
     transition: border-left 1500ms 200ms ease-in;
 }
